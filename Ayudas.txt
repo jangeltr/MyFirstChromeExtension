@@ -1,0 +1,27 @@
+---------------------------------------------------------------
+links que me ayudaron en Permisos para el manifest
+
+https://developer.chrome.com/docs/extensions/mv3/declare_permissions/
+
+https://developer.chrome.com/docs/extensions/reference/storage/
+
+https://developer.chrome.com/docs/extensions/reference/scripting/
+
+---------------------------------------------------------------
+permisos opcionales que tengo de revizar
+"optional_permissions": ["fileSystemProvider","fileBrowserHandler"],
+
+---------------------------------------------------------------
+
+como acceder al localStorage de la extencion, Nota: es diferente del localStorage normal
+el localStorage normal guarda la informacion como String
+el localStorage de la extencion guarda la informacion como objeto
+no se puede acceder directamente a ambos, el acceso a cada uno dependera del contexto en el que estemos "js"
+
+chrome.storage.local.set({key: value}, function() {
+  console.log('Value is set to ' + value);
+});
+
+chrome.storage.local.get(['key'], function(result) {
+  console.log('Value currently is ' + result.key);
+});

@@ -1,0 +1,18 @@
+﻿{
+  "manifest_version": 3,
+  "name": "MindBox Ext",
+  "author":"Jose Angel Torres Rangel, jangeltr@hotmail.com",
+  "version": "1.0",
+  "description": "Esta extension es para probar que puedo hacer una  extension",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "./popup/popup.html",
+    "default_icon": {
+      "128": "./images/128.png"
+    }
+  },
+  "web_accessible_resources": [{
+    "resources":["./ads/edd.json"],
+    "use_dynamic_url": true
+  }]
+}
